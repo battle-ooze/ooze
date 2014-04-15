@@ -16,7 +16,7 @@ Ooze
 - **/models** - 模型
 - **/node_modules** - npm包
 - **/dist** - 编译后的js
-- **/tests** - 单元测试
+- **/test** - 单元测试
 - **/views** - 模版
 
 ## 安装和使用
