@@ -26,6 +26,9 @@ Ooze
 ###全局安装coffeescript
 `npm install coffee-script -g`
 
+###安装依赖
+项目根目录下执行 `npm install`
+
 ###启动
 `coffee app.coffee`
 
