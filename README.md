@@ -1,6 +1,6 @@
 Ooze
 ==========
-
+![image](https://s3.amazonaws.com/cardgenhs/t/UWo8204r.png)
 
 ## 注意
 > node_modules不会入到库中，需要在目录下执行 `npm install` 安装依赖包
