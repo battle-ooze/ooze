@@ -1,3 +1,3 @@
 app = require './app'
-app.listen 3000
-console.log 'listen 3000'
+app.listen CONST.get('port')
+console.log 'listen ' + CONST.get('port')

@@ -4,6 +4,8 @@ controller示例
 - 如 home.example.coffee
 ###
 
+# 引入model
+User = require '../models/user'
 
 # 默认路由的请求方法，小写，可选，默认为get
 exports.method = 'get'
@@ -40,8 +42,9 @@ action数组 可以是一个返回值为数组的方法，也可以是一个数�
 ###
 exports.actions = () -> [
 
-	['index', (req, res, next)->
-		res.send "hello"
+	['/', (req, res, next)->
+		res.locals.username = new User().getUsername()
+		res.render "home/index"
 	]
 
 	['test', 'post', (req, res, next) ->

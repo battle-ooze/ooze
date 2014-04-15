@@ -3,8 +3,7 @@
 ###
 crypto = require 'crypto'
 
-utils = 
-
+utils =
 	# 生成随机字符串
 	generateSalt: (length) ->
 		SALTCHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'

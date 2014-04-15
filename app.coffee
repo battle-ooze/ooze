@@ -31,8 +31,8 @@ i18n = require 'i18n'
 i18n.configure CONST.get('i18n')
 app.use i18n.init
 
-# redis做session存储
 ###
+# redis做session存储
 redisStore = require('connect-redis')(express)
 app.use express.session {
 	store: new redisStore({
@@ -43,6 +43,8 @@ app.use express.session {
 	key: CONST.get('session:key') 
 }
 ###
+
+# 默认session 
 app.use express.session {
     secret: CONST.get('session:secret')
     key: CONST.get('session:key')

@@ -6,23 +6,20 @@ express = require 'express'
 logger = require('../logger').getLogger('unknownError')
 util = require 'util'
 env = CONST.get('NODE_ENV') || 'development'
-CODE = CONST.get('errorCode')
 
 module.exports = () ->
 
 	(err, req, res, next) ->
 		accept = req.headers.accept || ''
 
-		if not CODE[err.message] and env is 'production'
-			userId = req.user.userId or 0
-			content = util.format '%s %s %s %s %j %j %s', 
-				userId, req.ip, req.url, req.method, req.body, req.get('user-agent'), err.stack
-			logger.error(content)
-			err.message = 'internalServerError'
+		content = util.format '%s %s %s %j %j %s',
+			req.ip, req.url, req.method, req.body, req.get('user-agent'), err.stack
+		logger.error(content)
+		err.message = 'internalServerError'
 
 		error =
 			error: err.message
-			error_text: err.text or CODE[err.message] or CODE['_default']
+			error_text: err.text
 			error_data: err.data or undefined
 
 		if env isnt 'production'
@@ -35,6 +32,6 @@ module.exports = () ->
 			res.send 599, error
 		else if env is 'production'
 			res.locals.title = '500 Internal Server Error'
-			res.render 'error/error'	
-		else 
-			express.errorHandler()(err, req, res, next)	
+			res.render 'error/error'
+		else
+			express.errorHandler()(err, req, res, next)
