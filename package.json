@@ -1,0 +1,31 @@
+{
+	"name": "ooze",
+	"description": "ooze",
+	"version": "0.0.1",
+	"dependencies": {
+		"express": "3.4.5",
+		"redis":"*",
+		"jade": "*",
+		"connect-redis":"1.4.6",
+		"superagent":"*",
+		"supertest": "*",
+		"async":"*",
+		"should":"*",
+		"i18n":"*",
+		"lodash":"*",
+		"request": "*",
+		"memcached": "*",
+		"mysql": "*",
+		"log4js": "*",
+		"blanket": "*",
+		"ursa":"*",
+		"nconf":"*",
+		"shortstop":"0.0.1",
+		"jsonminify":"*"
+	},
+	"config": {
+		"blanket": {
+			"pattern": "dist"
+		}
+	}
+}

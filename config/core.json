@@ -1,0 +1,66 @@
+{
+	"port": 3000,
+
+	"timeout": 30000,
+
+	"route": {
+		"base": ""
+	},
+
+	"logger": {
+		"level": "ERROR"
+	},
+
+	"view" : {
+		"compileDebug": false,
+		"basedir": "path:./views"
+	},
+
+	"ssl": {
+		"public": "file:./config/ssl/public.key",
+		"private": "file:./config/ssl/private.key"
+	},
+
+	"express": {
+		"view engine": "jade",
+		"view cache": true,
+		"json spaces": 0,
+		"x-powered-by": false,
+		"trust proxy": true
+	},
+
+	"bodyParser": {
+		"limit": "500kb"
+	},
+
+	"redis": {
+		"host": "127.0.0.1",
+		"port": "6379",
+		"options": {
+			"connect_timeout": 10000
+		}
+	},
+
+	"memcached": "127.0.0.1:11211",
+
+	"mysql": {
+		"database": "test",
+		"host": "127.0.0.1",
+		"user":"root",
+		"password": "",
+		"connectionLimit": 100
+	},
+
+	"session": {
+		"ttl": 86400,
+		"secret": "^&OJKLDjf&(*)IJJ",
+		"key": "nodesessid"
+	},
+
+	"i18n": {
+		"locales": ["cn","en"],
+		"defaultLocale": "cn",
+		"directory": "path:./locales",
+		"cookie": "lang"
+	}
+}

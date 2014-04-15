@@ -1,0 +1,7 @@
+{
+    "name"       : "kuaipan_node",
+    "script"     : "server.js",
+    "instances"  : "max",
+    "error_file" : "./logs/fatalError.log",
+    "exec_mode"  : "cluster_mode"
+}

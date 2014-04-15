@@ -1,0 +1,12 @@
+{
+
+	"express": {
+		"view cache": false,
+		"json spaces": 1
+	},
+
+	"view" : {
+		"compileDebug": true,
+		"pretty": true
+	}
+}
