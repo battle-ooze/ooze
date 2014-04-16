@@ -3,7 +3,7 @@ Ooze
 ![image](https://s3.amazonaws.com/cardgenhs/t/UWo8204r.png)
 
 ## 注意
-> node_modules不会入到库中，需要在目录下执行 `npm install` 安装依赖包
+node_modules不会入到库中，需要在目录下执行 `npm install` 安装依赖包
 
 
 ## 目录结构
@@ -30,7 +30,7 @@ Ooze
 项目根目录下执行 `npm install`
 
 ###启动
-`coffee app.coffee`
+`coffee server.coffee`
 
 ###默认访问
 [http://127.0.0.1:3000](http://127.0.0.1:3000)
